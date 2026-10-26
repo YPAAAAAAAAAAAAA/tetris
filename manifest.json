@@ -1,0 +1,20 @@
+{
+  "id": "tetris",
+  "title": {
+    "en": "tetris",
+    "zh": "俄罗斯方块"
+  },
+  "intro": {
+    "en": "A phone falling-block well. Slide, turn, and drop the lacquer tiles, park one piece, and clear lines before the stack crowns the well.",
+    "zh": "一部给手机玩的下落方块。滑动、旋转、落下漆色方块，可以暂存一块，在堆到井口之前把整行消掉。"
+  },
+  "officialFiles": [
+    "vendor/index.html",
+    "vendor/tetris.css",
+    "vendor/tetris.js",
+    "vendor/LICENSE.txt"
+  ],
+  "playHtml": "play.html",
+  "aspect": "phone",
+  "githubRepo": "ypaaaaaaaaaaaaa/tetris"
+}
