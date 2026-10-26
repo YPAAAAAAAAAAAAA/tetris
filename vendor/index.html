@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<meta name="gb-retract" content="#credit">
+<title>tetris</title>
+<link rel="stylesheet" href="tetris.css">
+<link rel="prefetch" href="LICENSE.txt">
+</head>
+<body>
+<canvas id="well" width="390" height="844" aria-label="Falling block well"></canvas>
+<div id="pad">
+  <button id="btn-left" type="button" data-act="left" aria-label="Move left">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M15.2 4.8 L7 12 L15.2 19.2 Z"/></svg>
+  </button>
+  <button id="btn-right" type="button" data-act="right" aria-label="Move right">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8.8 4.8 L17 12 L8.8 19.2 Z"/></svg>
+  </button>
+  <button id="btn-rot" type="button" data-act="rot" aria-label="Turn">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" d="M16.2 8 A5.4 5.4 0 1 0 17.6 13.2"/><path fill="currentColor" d="M14.6 3.6 L20.2 7.4 L14.2 9.6 Z"/></svg>
+  </button>
+  <button id="btn-soft" type="button" data-act="soft" aria-label="Soft drop">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M6 9 L12 15 L18 9"/></svg>
+  </button>
+  <button id="btn-hard" type="button" data-act="hard" aria-label="Hard drop">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M6 6.2 L12 11.2 L18 6.2 M6 12.2 L12 17.2 L18 12.2"/></svg>
+  </button>
+  <button id="btn-hold" type="button" data-act="hold" aria-label="Hold">H</button>
+</div>
+<button id="gb-ui-toggle" type="button" aria-label="Show notes" aria-expanded="false">
+  <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+    <circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/>
+    <path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M12 3v2.2M12 18.8V21M3 12h2.2M18.8 12H21M5.6 5.6l1.6 1.6M16.8 16.8l1.6 1.6M18.4 5.6l-1.6 1.6M7.2 16.8l-1.6 1.6"/>
+  </svg>
+</button>
+<aside id="credit">
+  <h2>Tetris</h2>
+  <p>Slide on the well, or use the keys along the bottom. Left and right move. A short tap on the well, or the curved arrow, turns the piece. The single chevron is a soft drop, a downward flick or the double chevron drops it straight down, and H parks the piece once.</p>
+  <p>Clear a full line to score. Every ten lines the well gets quicker. The round arrow starts a fresh well.</p>
+  <p class="src">idea after @ospann (ospann/tetris); clean-room implementation, no code copied</p>
+</aside>
+<script src="tetris.js"></script>
+</body>
+</html>
