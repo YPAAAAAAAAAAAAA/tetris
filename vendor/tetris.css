@@ -1,0 +1,123 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  background: #070814;
+  color: #f6edd8;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+}
+body {
+  position: relative;
+  touch-action: none;
+  overscroll-behavior: none;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
+#well {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  touch-action: none;
+  z-index: 1;
+}
+#pad {
+  position: absolute;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  pointer-events: none;
+  visibility: hidden;
+  z-index: 3;
+  box-sizing: border-box;
+}
+body.fitted #pad { visibility: visible; }
+#pad button {
+  pointer-events: auto;
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  border-radius: 50%;
+  border: 1px solid rgba(232, 206, 160, 0.55);
+  background: radial-gradient(circle at 35% 28%, #46506e, #171b2c 72%);
+  color: #f6edd8;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.18), 0 6px 14px rgba(0, 0, 0, 0.35);
+  font: 700 16px/1 ui-sans-serif, system-ui, sans-serif;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+#pad button svg {
+  width: 46%;
+  height: 46%;
+  display: block;
+  margin: 0 auto;
+  pointer-events: none;
+}
+#pad button[aria-pressed="true"],
+#pad button:active {
+  background: radial-gradient(circle at 35% 28%, #6d7ba3, #2a314c 72%);
+  transform: translateY(1px);
+}
+#pad button:focus { outline: none; }
+#pad button:focus-visible {
+  outline: 2px solid #f4e7c8;
+  outline-offset: 2px;
+}
+#gb-ui-toggle {
+  position: fixed;
+  top: 6px;
+  right: 6px;
+  width: 44px;
+  height: 44px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 22px;
+  background: rgba(0, 0, 0, 0.45);
+  color: #fff;
+  opacity: 0.8;
+  z-index: 6;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+#gb-ui-toggle svg { display: block; pointer-events: none; }
+#credit {
+  display: none;
+  position: absolute;
+  z-index: 5;
+  top: 52px;
+  right: 8px;
+  left: auto;
+  width: min(42vw, 200px);
+  max-height: 40vh;
+  overflow: auto;
+  box-sizing: border-box;
+  padding: 12px;
+  border-radius: 14px;
+  background: rgba(10, 12, 24, 0.94);
+  color: #f6edd8;
+  border: 1px solid rgba(232, 206, 160, 0.35);
+  font: 13px/1.45 ui-sans-serif, system-ui, sans-serif;
+}
+html.gb-ui-open #credit { display: block; }
+#credit h2 {
+  margin: 0 0 6px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+#credit p { margin: 0 0 8px; }
+#credit .src { font-size: 11px; opacity: 0.85; }
